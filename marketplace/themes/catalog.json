@@ -1,0 +1,226 @@
+{
+  "schema": "modverse.distribution.v1",
+  "published": true,
+  "items": [
+    {
+      "id": "1007005077904568360-1556346128365133844-asset-1",
+      "category": "themes",
+      "name": "Crimson Red",
+      "creator": "HIKA",
+      "post_date": "Sunday, October 4, 2026 9:43 AM",
+      "description": "Crimson Red (Background slightly animated)",
+      "source_channel_id": "1007005077904568360",
+      "source_post_id": "1556346128365133844",
+      "source_message_id": "1556346128365133844",
+      "source_archive_post": "theme-shares",
+      "thumbnail": "marketplace/themes/thumbnails/1007005077904568360-1556346128365133844-asset-1.jpg",
+      "thumbnail_kind": "original_discord_screenshot",
+      "files": [
+        {
+          "asset_name": "mv-1007005077904568360-1556346128365133844-1-Crimson_Red-0200d068863cfdad.rar",
+          "sha256": "6c7a477ab0c5f0f88a97e6fa15fb114a8e469faa77b86038d840b00f14095901",
+          "size_bytes": 1259806,
+          "download_url": "https://github.com/xReVoLTiThemeDev/GTAV-Cherax-ModVerse-Marketplace/releases/download/themes-2026-10-pilot01/mv-1007005077904568360-1556346128365133844-1-Crimson_Red-0200d068863cfdad.rar"
+        }
+      ],
+      "install_mode": "download_only",
+      "permission_basis": "individual_review",
+      "metadata_version": 1,
+      "thumbnail_url": "https://raw.githubusercontent.com/xReVoLTiThemeDev/GTAV-Cherax-ModVerse-Marketplace/main/marketplace/themes/thumbnails/1007005077904568360-1556346128365133844-asset-1.jpg",
+      "compatibility_status": "unverified_in_game"
+    },
+    {
+      "id": "1007005077904568360-1558078577193263154-asset-1",
+      "category": "themes",
+      "name": "CLP Nova Black and White",
+      "creator": "CLP_NOVA",
+      "post_date": "Friday, October 9, 2026 4:28 AM",
+      "description": "",
+      "source_channel_id": "1007005077904568360",
+      "source_post_id": "1558078577193263154",
+      "source_message_id": "1558078577193263154",
+      "source_archive_post": "theme-shares",
+      "thumbnail": "marketplace/themes/thumbnails/1007005077904568360-1558078577193263154-asset-1.jpg",
+      "thumbnail_kind": "original_discord_screenshot",
+      "files": [
+        {
+          "asset_name": "mv-1007005077904568360-1558078577193263154-1-CLP_NOVA_BLACK_AND_WHITE-6c58e79e20.zip",
+          "sha256": "3312c080bc3b5ae6c3bf949c0f711b0b4c2545b60cafb6b7826d3cd416d6c5f3",
+          "size_bytes": 3187247,
+          "download_url": "https://github.com/xReVoLTiThemeDev/GTAV-Cherax-ModVerse-Marketplace/releases/download/themes-2026-10-pilot01/mv-1007005077904568360-1558078577193263154-1-CLP_NOVA_BLACK_AND_WHITE-6c58e79e20.zip"
+        }
+      ],
+      "install_mode": "download_only",
+      "permission_basis": "individual_review",
+      "metadata_version": 1,
+      "thumbnail_url": "https://raw.githubusercontent.com/xReVoLTiThemeDev/GTAV-Cherax-ModVerse-Marketplace/main/marketplace/themes/thumbnails/1007005077904568360-1558078577193263154-asset-1.jpg",
+      "compatibility_status": "unverified_in_game"
+    },
+    {
+      "id": "1007005077904568360-1558641293012242543-asset-1",
+      "category": "themes",
+      "name": "Luffy Complete (Gear 5)",
+      "creator": "CLP_NOVA",
+      "post_date": "Saturday, October 10, 2026 5:44 PM",
+      "description": "",
+      "source_channel_id": "1007005077904568360",
+      "source_post_id": "1558641293012242543",
+      "source_message_id": "1558641293012242543",
+      "source_archive_post": "theme-shares",
+      "thumbnail": "marketplace/themes/thumbnails/1007005077904568360-1558641293012242543-asset-1.jpg",
+      "thumbnail_kind": "original_discord_screenshot",
+      "files": [
+        {
+          "asset_name": "mv-1007005077904568360-1558641293012242543-1-LUFFY_COMPLET-ee41c515bab16403.zip",
+          "sha256": "79ddb8f61a2980f4cc408c4d24f3ac1aa61d7751f2c3d744fd3f6fe8045fd651",
+          "size_bytes": 2199448,
+          "download_url": "https://github.com/xReVoLTiThemeDev/GTAV-Cherax-ModVerse-Marketplace/releases/download/themes-2026-10-pilot01/mv-1007005077904568360-1558641293012242543-1-LUFFY_COMPLET-ee41c515bab16403.zip"
+        }
+      ],
+      "install_mode": "download_only",
+      "permission_basis": "individual_review",
+      "metadata_version": 1,
+      "thumbnail_url": "https://raw.githubusercontent.com/xReVoLTiThemeDev/GTAV-Cherax-ModVerse-Marketplace/main/marketplace/themes/thumbnails/1007005077904568360-1558641293012242543-asset-1.jpg",
+      "compatibility_status": "unverified_in_game"
+    },
+    {
+      "id": "1007005077904568360-1558910917897486436-asset-1",
+      "category": "themes",
+      "name": "Cherax Neon Purple",
+      "creator": "Jxnyar",
+      "post_date": "Sunday, October 11, 2026 11:35 AM",
+      "description": "Cherax Neon Purple",
+      "source_channel_id": "1007005077904568360",
+      "source_post_id": "1558910917897486436",
+      "source_message_id": "1558910917897486436",
+      "source_archive_post": "theme-shares",
+      "thumbnail": "marketplace/themes/thumbnails/1007005077904568360-1558910917897486436-asset-1.jpg",
+      "thumbnail_kind": "original_discord_screenshot",
+      "files": [
+        {
+          "asset_name": "mv-1007005077904568360-1558910917897486436-1-Cherax_Neon_Purple-3649612141cf5c6f.zip",
+          "sha256": "db350187bc99dcf39d840130de09c184388df06f283ead9f64ec5d193a651ffe",
+          "size_bytes": 2017,
+          "download_url": "https://github.com/xReVoLTiThemeDev/GTAV-Cherax-ModVerse-Marketplace/releases/download/themes-2026-10-pilot01/mv-1007005077904568360-1558910917897486436-1-Cherax_Neon_Purple-3649612141cf5c6f.zip"
+        }
+      ],
+      "install_mode": "download_only",
+      "permission_basis": "individual_review",
+      "metadata_version": 1,
+      "thumbnail_url": "https://raw.githubusercontent.com/xReVoLTiThemeDev/GTAV-Cherax-ModVerse-Marketplace/main/marketplace/themes/thumbnails/1007005077904568360-1558910917897486436-asset-1.jpg",
+      "compatibility_status": "unverified_in_game"
+    },
+    {
+      "id": "1007005077904568360-1558910917897486436-asset-2",
+      "category": "themes",
+      "name": "Red Black Theme",
+      "creator": "Jxnyar",
+      "post_date": "Sunday, October 11, 2026 11:35 AM",
+      "description": "Red Black Theme",
+      "source_channel_id": "1007005077904568360",
+      "source_post_id": "1558910917897486436",
+      "source_message_id": "1558911208373878844",
+      "source_archive_post": "theme-shares",
+      "thumbnail": "marketplace/themes/thumbnails/1007005077904568360-1558910917897486436-asset-2.jpg",
+      "thumbnail_kind": "original_discord_screenshot",
+      "files": [
+        {
+          "asset_name": "mv-1007005077904568360-1558910917897486436-2-Red_Black_Theme-79ae4e6a2a59be8c.zip",
+          "sha256": "6a4b016c60ed44f13149d96023357057f6bcf05a17634d7d456d7896590d9508",
+          "size_bytes": 2364,
+          "download_url": "https://github.com/xReVoLTiThemeDev/GTAV-Cherax-ModVerse-Marketplace/releases/download/themes-2026-10-pilot01/mv-1007005077904568360-1558910917897486436-2-Red_Black_Theme-79ae4e6a2a59be8c.zip"
+        }
+      ],
+      "install_mode": "download_only",
+      "permission_basis": "individual_review",
+      "metadata_version": 1,
+      "thumbnail_url": "https://raw.githubusercontent.com/xReVoLTiThemeDev/GTAV-Cherax-ModVerse-Marketplace/main/marketplace/themes/thumbnails/1007005077904568360-1558910917897486436-asset-2.jpg",
+      "compatibility_status": "unverified_in_game"
+    },
+    {
+      "id": "1007005077904568360-1558910917897486436-asset-3",
+      "category": "themes",
+      "name": "Cherax Grimm Horror Theme",
+      "creator": "Jxnyar",
+      "post_date": "Sunday, October 11, 2026 11:35 AM",
+      "description": "Cherax Grimm Horror Theme",
+      "source_channel_id": "1007005077904568360",
+      "source_post_id": "1558910917897486436",
+      "source_message_id": "1558911361789206599",
+      "source_archive_post": "theme-shares",
+      "thumbnail": "marketplace/themes/thumbnails/1007005077904568360-1558910917897486436-asset-3.jpg",
+      "thumbnail_kind": "original_discord_screenshot",
+      "files": [
+        {
+          "asset_name": "mv-1007005077904568360-1558910917897486436-3-Cherax_Grimm_Horror_Theme-f8860e8f6.zip",
+          "sha256": "020b17cb5e7c131db47f277bed6c6671d31f6410888c42e0260e6d295c416189",
+          "size_bytes": 3581024,
+          "download_url": "https://github.com/xReVoLTiThemeDev/GTAV-Cherax-ModVerse-Marketplace/releases/download/themes-2026-10-pilot01/mv-1007005077904568360-1558910917897486436-3-Cherax_Grimm_Horror_Theme-f8860e8f6.zip"
+        }
+      ],
+      "install_mode": "download_only",
+      "permission_basis": "individual_review",
+      "metadata_version": 1,
+      "thumbnail_url": "https://raw.githubusercontent.com/xReVoLTiThemeDev/GTAV-Cherax-ModVerse-Marketplace/main/marketplace/themes/thumbnails/1007005077904568360-1558910917897486436-asset-3.jpg",
+      "compatibility_status": "unverified_in_game"
+    },
+    {
+      "id": "1007005077904568360-1558915042555199669-asset-1",
+      "category": "themes",
+      "name": "Cherax Monochrome Theme Pack",
+      "creator": "Jxnyar",
+      "post_date": "Sunday, October 11, 2026 11:51 AM",
+      "description": "Cherax Monochrome Theme Pack",
+      "source_channel_id": "1007005077904568360",
+      "source_post_id": "1558915042555199669",
+      "source_message_id": "1558915042555199669",
+      "source_archive_post": "theme-shares",
+      "thumbnail": "marketplace/themes/thumbnails/1007005077904568360-1558915042555199669-asset-1.jpg",
+      "thumbnail_kind": "original_discord_screenshot",
+      "files": [
+        {
+          "asset_name": "mv-1007005077904568360-1558915042555199669-1-Cherax_Monochrome_Theme_Pack-8acc7a.zip",
+          "sha256": "120bdc36fc6ea89c840c0a1598fb3ca95b897ba8d32dd4300c2af5aeb501c70c",
+          "size_bytes": 1313316,
+          "download_url": "https://github.com/xReVoLTiThemeDev/GTAV-Cherax-ModVerse-Marketplace/releases/download/themes-2026-10-pilot01/mv-1007005077904568360-1558915042555199669-1-Cherax_Monochrome_Theme_Pack-8acc7a.zip"
+        }
+      ],
+      "install_mode": "download_only",
+      "permission_basis": "individual_review",
+      "metadata_version": 1,
+      "thumbnail_url": "https://raw.githubusercontent.com/xReVoLTiThemeDev/GTAV-Cherax-ModVerse-Marketplace/main/marketplace/themes/thumbnails/1007005077904568360-1558915042555199669-asset-1.jpg",
+      "compatibility_status": "unverified_in_game"
+    },
+    {
+      "id": "1007005077904568360-1558915042555199669-asset-2",
+      "category": "themes",
+      "name": "Cherax Robbery Purple Theme",
+      "creator": "Jxnyar",
+      "post_date": "Sunday, October 11, 2026 11:51 AM",
+      "description": "Cherax Robbery Purple Theme",
+      "source_channel_id": "1007005077904568360",
+      "source_post_id": "1558915042555199669",
+      "source_message_id": "1558915243101659146",
+      "source_archive_post": "theme-shares",
+      "thumbnail": "marketplace/themes/thumbnails/1007005077904568360-1558915042555199669-asset-2.jpg",
+      "thumbnail_kind": "original_discord_screenshot",
+      "files": [
+        {
+          "asset_name": "mv-1007005077904568360-1558915042555199669-2-Cherax_Robbery_Purple_Theme-f8e9431.zip",
+          "sha256": "fe3b13fc91b2772e369ff8a20ee62b73bd0d3bec30d23f0b1d5e4d12e0a10199",
+          "size_bytes": 722760,
+          "download_url": "https://github.com/xReVoLTiThemeDev/GTAV-Cherax-ModVerse-Marketplace/releases/download/themes-2026-10-pilot01/mv-1007005077904568360-1558915042555199669-2-Cherax_Robbery_Purple_Theme-f8e9431.zip"
+        }
+      ],
+      "install_mode": "download_only",
+      "permission_basis": "individual_review",
+      "metadata_version": 1,
+      "thumbnail_url": "https://raw.githubusercontent.com/xReVoLTiThemeDev/GTAV-Cherax-ModVerse-Marketplace/main/marketplace/themes/thumbnails/1007005077904568360-1558915042555199669-asset-2.jpg",
+      "compatibility_status": "unverified_in_game"
+    }
+  ],
+  "release_tag": "themes-2026-10-pilot01",
+  "catalog_version": 1,
+  "compatibility_notice": "Download-only pilot. Archive files have not been tested for in-game compatibility or automatic installation.",
+  "repository": "https://github.com/xReVoLTiThemeDev/GTAV-Cherax-ModVerse-Marketplace"
+}
