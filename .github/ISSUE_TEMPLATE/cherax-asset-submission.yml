@@ -1,0 +1,59 @@
+name: Cherax outfit or DLC submission
+description: Submit original Cherax outfit JSONs or ready-made unencrypted RPF7 DLCs to ModVerse.
+title: "[Cherax Asset]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Only attach files you are authorized to publish. Posts and screenshots alone are not downloadable mods. Every accepted entry requires actual bytes, a creator credit and integrity review.
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options:
+        - Cherax Outfit (.json)
+        - Cherax DLC (dlc.rpf)
+    validations:
+      required: true
+  - type: input
+    id: name
+    attributes:
+      label: Display name
+    validations:
+      required: true
+  - type: input
+    id: original_creator
+    attributes:
+      label: Original developer or confirmed attribution
+    validations:
+      required: true
+  - type: input
+    id: discord_uploader
+    attributes:
+      label: Original Discord uploader (if different)
+  - type: textarea
+    id: file
+    attributes:
+      label: Actual source file
+      description: Upload or link the original .json or unencrypted OPEN RPF7 DLC. Archives need inspection and preparation first.
+    validations:
+      required: true
+  - type: textarea
+    id: preview
+    attributes:
+      label: Matching in-game screenshot
+      description: Optional JPG of the exact submitted asset. Include approval to redistribute it.
+  - type: textarea
+    id: provenance
+    attributes:
+      label: Original post and permission evidence
+      description: Original source message link, license or rightsholder grant; do not share private permission messages publicly.
+    validations:
+      required: true
+  - type: checkboxes
+    id: consent
+    attributes:
+      label: Redistribution
+      options:
+        - label: I own or have permission to authorize public GitHub hosting and ModVerse distribution of the supplied file and any image.
+          required: true
