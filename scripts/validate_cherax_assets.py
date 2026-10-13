@@ -28,9 +28,27 @@ def check_category(kind: str):
         raise ValueError(f"{kind}: category/published mismatch")
     items = catalog.get("items")
     if not isinstance(items, list) or len(items) > 500:
-        raise ValueError(f"{kind}: items must be an array with 0-500 records")
+        raise ValueError(f"{kind}: main items must be an array with 0-500 records")
+    pages = catalog.get("pages", [])
+    if not isinstance(pages, list) or len(pages) > 9 or pages != list(range(2,len(pages)+2)):
+        raise ValueError(f"{kind}: invalid page list (expected 2,3,..., max 10 pages)")
+    all_items = list(items)
+    for page in pages:
+        page_file = folder / f"catalog-{page}.json"
+        page_raw = page_file.read_bytes()
+        if len(page_raw) > 1024*1024:
+            raise ValueError(f"{kind}: catalog-{page} exceeds 1 MiB")
+        page_doc = json.loads(page_raw.decode("utf-8-sig"))
+        if not isinstance(page_doc,dict) or page_doc.get("schema") != catalog["schema"] or page_doc.get("category") != kind or page_doc.get("published") is not True:
+            raise ValueError(f"{kind}: invalid catalog-{page}")
+        page_items = page_doc.get("items")
+        if not isinstance(page_items,list) or len(page_items) > 500:
+            raise ValueError(f"{kind}: invalid catalog-{page} item count")
+        all_items.extend(page_items)
+    if len(all_items) > 5000:
+        raise ValueError(f"{kind}: over 5,000 entries")
     ids, filenames, hashes = set(), set(), set()
-    for i, row in enumerate(items, 1):
+    for i, row in enumerate(all_items, 1):
         label = f"{kind}[{i}]"
         if not isinstance(row, dict): raise ValueError(f"{label}: not an object")
         ident, filename = row.get("id"), row.get("filename")
@@ -83,7 +101,7 @@ def check_category(kind: str):
             if len(data) < 100 or len(data) > 6*1024*1024 or not data.startswith(bytes([255,216])) or not data.endswith(bytes([255,217])):
                 raise ValueError(f"{label}: missing/non-JPEG thumbnail")
             if hashlib.sha256(data).hexdigest() != preview_sha:raise ValueError(f"{label}: JPEG checksum mismatch")
-    print(f"PASS: {kind}: {len(items)} SHA-256 verified downloadable assets.")
+    print(f"PASS: {kind}: {len(all_items)} SHA-256 verified downloadable assets across {1+len(pages)} page(s).")
 
 if __name__ == "__main__":
     try:
