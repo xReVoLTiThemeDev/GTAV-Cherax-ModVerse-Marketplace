@@ -4,6 +4,9 @@ on:
   push:
     paths:
       - 'marketplace/vehicles/**'
+      - 'marketplace/outfits/**'
+      - 'marketplace/dlcs/**'
+      - 'scripts/validate_cherax_assets.py'
       - 'scripts/validate_vehicles_catalog.py'
       - '.github/workflows/vehicles-catalog-validation.yml'
   pull_request:
@@ -26,3 +29,5 @@ jobs:
           python-version: '3.11'
       - name: Validate vehicle manifest and SHA-256 hashes
         run: python scripts/validate_vehicles_catalog.py
+      - name: Validate Cherax outfit and DLC catalogs
+        run: python scripts/validate_cherax_assets.py
