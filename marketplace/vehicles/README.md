@@ -1,14 +1,14 @@
 # ModVerse Community Vehicles
 
-This directory hosts the **public, permission-approved** JSON vehicle catalog for the ModVerse Cherax marketplace. The existing private testing collection (20 Pilot 01 + 99 Batch 02 Cherax-format files) is **not** automatically a public release.
+This directory hosts the **public, permission-approved** JSON vehicle catalog for the ModVerse Cherax marketplace. The existing private testing collection (20 Pilot 01 + 99 Batch 02 Cherax-format files) is **not** automatically a public release. The first approved vehicle is **ZentornoGalaxyPink**, developed by **Public_Urinal**.
 
 ## Catalog
 - `catalog.json`: `modverse.vehicles.v1`, `published: true`, max 500 entries per catalog revision.
-- Each approved vehicle is stored unchanged at `files/<discord-channel-id>-<post-id>.json`.
-- Each approved JPG thumbnail is stored at `thumbnails/<discord-channel-id>-<post-id>.jpg`.
+- Each approved vehicle is stored unchanged at `files/<catalog-id>.json` (source-post ID or allocated first-party ID).
+- Each approved JPG thumbnail is stored at `thumbnails/<catalog-id>.jpg`.
 - The client derives URLs from validated numerical IDs and this repository's HTTPS raw base.
 - The client verifies vehicle JSON byte size and SHA-256 before installing to `Documents\\Cherax\\Vehicles\\mMV_*.json`. Thumbnails are SHA-256 pinned too.
-- An empty `items` array is an intentionally valid catalog: **0 vehicles have been licensed and publicly released at this stage**.
+- An empty `items` array is valid, but the current public catalog contains **1 creator-submitted vehicle**. The private 119 candidate files are awaiting rights review; **21** have recorded in-game test results.
 
 ## Example catalog item (documentation only, do not add without authorization)
 
@@ -25,6 +25,10 @@ This directory hosts the **public, permission-approved** JSON vehicle catalog fo
   "thumbnail_sha256": "fedcba9876543210fedcba9876543210fedcba9876543210fedcba9876543210"
 }
 ```
+
+## Contribute vehicles
+
+Use [the vehicle submission guide](SUBMIT_A_VEHICLE.md) or open a **Vehicle submission** issue in this repository. We welcome original Cherax vehicle builds with matching in-game screenshots, clear developer credit, and permission to host both files on GitHub.
 
 ## Publishing gate
 
