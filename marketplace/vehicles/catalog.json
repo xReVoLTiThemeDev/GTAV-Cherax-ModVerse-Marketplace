@@ -1,9 +1,25 @@
+
 {
   "schema": "modverse.vehicles.v1",
   "published": true,
-  "catalog_version": 1,
+  "catalog_version": 2,
   "updated_at": "2026-10-12",
   "license_policy": "individual_creator_authorization_required",
   "description": "ModVerse approved Cherax JSON vehicle marketplace. Entries appear only after explicit redistribution authorization and integrity review.",
-  "items": []
+  "items": [
+    {
+      "id": "1256941518036406273-202610121927000001",
+      "name": "ZentornoGalaxyPink",
+      "creator": "Public_Urinal",
+      "shared_by": "Public_Urinal",
+      "creator_credit_basis": "Self-submitted by original developer",
+      "model": 2891838741,
+      "filename": "mMV_ZentornoGalaxyPink_7dfad213.json",
+      "sha256": "7dfad2131c31e067d447a3585bdc9182f649e4766397ba630ab038b6412d5714",
+      "size_bytes": 3691,
+      "thumbnail_sha256": "ef56f58b028a49f37c748eeac0f00f9a073fb4ebde5f0282db026bcacf89eeb6",
+      "source_type": "direct_creator_submission",
+      "notes": "First-party ModVerse GitHub vehicle test. Original developer: Public_Urinal."
+    }
+  ]
 }
