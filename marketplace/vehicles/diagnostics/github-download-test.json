@@ -1,0 +1,9 @@
+{
+  "schema": "modverse.github_download_test.v1",
+  "purpose": "Verify GitHub raw download, SHA-256, and local staging in Cherax",
+  "publisher": "ModVerse",
+  "vehicle": false,
+  "install_to_vehicles": false,
+  "version": 1,
+  "message": "ModVerse GitHub connectivity verified"
+}
