@@ -1,0 +1,28 @@
+name: Validate ModVerse Vehicle Catalog
+
+on:
+  push:
+    paths:
+      - 'marketplace/vehicles/**'
+      - 'scripts/validate_vehicles_catalog.py'
+      - '.github/workflows/vehicles-catalog-validation.yml'
+  pull_request:
+    paths:
+      - 'marketplace/vehicles/**'
+      - 'scripts/validate_vehicles_catalog.py'
+      - '.github/workflows/vehicles-catalog-validation.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Validate vehicle manifest and SHA-256 hashes
+        run: python scripts/validate_vehicles_catalog.py
