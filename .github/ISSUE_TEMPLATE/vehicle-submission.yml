@@ -1,0 +1,59 @@
+name: Vehicle submission
+description: Propose a Cherax Entity saved vehicle for the ModVerse public marketplace
+title: "[Vehicle]: "
+labels: ["vehicle-submission"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Issues are public. Only attach files you can authorize for public GitHub distribution. Each submission requires a Cherax Entity JSON and a matching actual in-game JPG screenshot.
+  - type: input
+    id: vehicle_name
+    attributes:
+      label: Vehicle name
+      placeholder: ZentornoGalaxyPink
+    validations:
+      required: true
+  - type: input
+    id: original_developer
+    attributes:
+      label: Original configuration developer
+      description: Creator of the saved build, who may differ from the Discord uploader.
+    validations:
+      required: true
+  - type: input
+    id: shared_by
+    attributes:
+      label: Shared by (optional)
+      description: Uploading account if different from the developer.
+  - type: textarea
+    id: files
+    attributes:
+      label: Saved JSON and matching JPG
+      description: Attach both files or link to their public downloads.
+    validations:
+      required: true
+  - type: textarea
+    id: credit_source
+    attributes:
+      label: Source and credit information
+      description: Original source message/post, licenses, attribution terms, or permission evidence.
+  - type: dropdown
+    id: rights
+    attributes:
+      label: Publication rights basis
+      options:
+        - I created both assets and can authorize publication
+        - I have grants from the relevant rightsholder(s)
+        - The assets carry a license permitting redistribution
+    validations:
+      required: true
+  - type: checkboxes
+    id: agreement
+    attributes:
+      label: Publication authorization
+      options:
+        - label: I own or have authorization for both the vehicle JSON and its image and authorize public GitHub hosting, downloading, and in-game installation through ModVerse with the stated credit.
+          required: true
+        - label: I understand compatibility, attribution, rights, and integrity are reviewed before approval.
+          required: true
