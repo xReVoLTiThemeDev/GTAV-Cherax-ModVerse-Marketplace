@@ -1,4 +1,4 @@
-name: Validate ModVerse Vehicle Catalog
+name: Validate ModVerse Marketplace Catalogs
 
 on:
   push:
@@ -12,6 +12,9 @@ on:
   pull_request:
     paths:
       - 'marketplace/vehicles/**'
+      - 'marketplace/outfits/**'
+      - 'marketplace/dlcs/**'
+      - 'scripts/validate_cherax_assets.py'
       - 'scripts/validate_vehicles_catalog.py'
       - '.github/workflows/vehicles-catalog-validation.yml'
   workflow_dispatch:
