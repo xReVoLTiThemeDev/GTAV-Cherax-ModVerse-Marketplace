@@ -1,0 +1,401 @@
+{
+	"format": "Cherax Entity",
+	"type": 2,
+	"model": 1813637474,
+	"baseFlags": 66871,
+	"components": {
+		"Head": {
+			"drawable": 0,
+			"texture": 0,
+			"palette": 0
+		},
+		"Beard": {
+			"drawable": 0,
+			"texture": 0,
+			"palette": 0
+		},
+		"Hair": {
+			"drawable": 0,
+			"texture": 0,
+			"palette": 0
+		},
+		"Torso": {
+			"drawable": 0,
+			"texture": 0,
+			"palette": 0
+		},
+		"Legs": {
+			"drawable": 0,
+			"texture": 0,
+			"palette": 0
+		},
+		"Hands": {
+			"drawable": 0,
+			"texture": 0,
+			"palette": 0
+		},
+		"Feet": {
+			"drawable": 0,
+			"texture": 0,
+			"palette": 0
+		},
+		"Teeth": {
+			"drawable": 0,
+			"texture": 0,
+			"palette": 0
+		},
+		"Special": {
+			"drawable": 0,
+			"texture": 0,
+			"palette": 0
+		},
+		"Special 2": {
+			"drawable": 0,
+			"texture": 0,
+			"palette": 0
+		},
+		"Decal": {
+			"drawable": 0,
+			"texture": 0,
+			"palette": 0
+		},
+		"Tuxedo/Jacket Bib": {
+			"drawable": 0,
+			"texture": 0,
+			"palette": 0
+		}
+	},
+	"props": {
+		"Head": {
+			"drawable": -1,
+			"texture": -1
+		},
+		"Eyes": {
+			"drawable": -1,
+			"texture": -1
+		},
+		"Ears": {
+			"drawable": -1,
+			"texture": -1
+		},
+		"Mouth": {
+			"drawable": -1,
+			"texture": -1
+		},
+		"Left Hand": {
+			"drawable": -1,
+			"texture": -1
+		},
+		"Right Hand": {
+			"drawable": -1,
+			"texture": -1
+		},
+		"Left Wrist": {
+			"drawable": -1,
+			"texture": -1
+		},
+		"Right Wrist": {
+			"drawable": -1,
+			"texture": -1
+		},
+		"Hip": {
+			"drawable": -1,
+			"texture": -1
+		}
+	},
+	"face_features": {
+		"Nose Width": 0.0,
+		"Nose Peak": 0.0,
+		"Nose Length": 0.0,
+		"Nose Bone Curveness": 0.0,
+		"Nose Tip": 0.0,
+		"Nose Bone Twist": 0.0,
+		"Eyebrow Height": 0.0,
+		"Eyebrow Indent": 0.0,
+		"Cheek Bones": 0.0,
+		"Cheek Sideways Bone Size": 0.0,
+		"Cheek Bones Width": 0.0,
+		"Eye Opening": 0.0,
+		"Lip Thickness": 0.0,
+		"Jaw Bone Width": 0.0,
+		"Jaw Bone Shape": 0.0,
+		"Chin Bone": 0.0,
+		"Chin Bone Length": 0.0,
+		"Chin Bone Shape": 0.0,
+		"Chin Hole": 0.0,
+		"Neck Thickness": 0.0
+	},
+	"primary_hair_tint": 255,
+	"secondary_hair_tint": 255,
+	"attachments": [
+		{
+			"data": {
+				"offset": {
+					"x": 0.009999999776482582,
+					"y": -0.009999999776482582,
+					"z": 0.0
+				},
+				"parentOffset": {
+					"x": 0.0,
+					"y": 0.0,
+					"z": 0.0
+				},
+				"quat": {
+					"x": 0.7071067690849304,
+					"y": 3.0908619663705394e-08,
+					"z": 0.7071067690849304,
+					"w": -3.0908619663705394e-08
+				},
+				"otherBone": 22,
+				"myBone": -1,
+				"flags": 1067138
+			},
+			"entity": {
+				"format": "Cherax Entity",
+				"type": 3,
+				"model": 388861061,
+				"baseFlags": 8455435
+			}
+		},
+		{
+			"data": {
+				"offset": {
+					"x": -0.09000000357627869,
+					"y": -0.15999998152256012,
+					"z": -2.2351741291171123e-10
+				},
+				"parentOffset": {
+					"x": 0.0,
+					"y": 0.0,
+					"z": 0.0
+				},
+				"quat": {
+					"x": 0.6676595211029053,
+					"y": -0.04925107955932617,
+					"z": 0.7415109872817993,
+					"w": 0.04434586688876152
+				},
+				"otherBone": 21,
+				"myBone": -1,
+				"flags": 1067138
+			},
+			"entity": {
+				"format": "Cherax Entity",
+				"type": 3,
+				"model": 1075296156,
+				"baseFlags": 8455431,
+				"attachments": [
+					{
+						"data": {
+							"offset": {
+								"x": 0.12999999523162842,
+								"y": -0.2199999988079071,
+								"z": -0.07999999821186066
+							},
+							"parentOffset": {
+								"x": 0.0,
+								"y": 0.0,
+								"z": 0.0
+							},
+							"quat": {
+								"x": 0.20033571124076843,
+								"y": -0.12075987458229065,
+								"z": 0.2212437391281128,
+								"w": 0.9467491507530212
+							},
+							"otherBone": 0,
+							"myBone": -1,
+							"flags": 16514
+						},
+						"entity": {
+							"format": "Cherax Entity",
+							"type": 3,
+							"model": 3999186071,
+							"baseFlags": 8455431,
+							"attachments": [
+								{
+									"data": {
+										"offset": {
+											"x": 0.030000003054738045,
+											"y": 0.0,
+											"z": 0.0
+										},
+										"parentOffset": {
+											"x": 0.0,
+											"y": 0.0,
+											"z": 0.0
+										},
+										"quat": {
+											"x": 0.026564456522464752,
+											"y": -0.17520132660865784,
+											"z": 0.04630868136882782,
+											"w": 0.9830840826034546
+										},
+										"otherBone": -1,
+										"myBone": -1,
+										"flags": 16514
+									},
+									"entity": {
+										"format": "Cherax Entity",
+										"type": 3,
+										"model": 3999186071,
+										"baseFlags": 8455431
+									}
+								}
+							]
+						}
+					}
+				]
+			}
+		},
+		{
+			"data": {
+				"offset": {
+					"x": 0.009999999776482582,
+					"y": -0.1899999976158142,
+					"z": 0.07999999821186066
+				},
+				"parentOffset": {
+					"x": 0.0,
+					"y": 0.0,
+					"z": 0.0
+				},
+				"quat": {
+					"x": -0.10241453349590302,
+					"y": -0.20407044887542725,
+					"z": -0.9698449373245239,
+					"w": 0.08524730801582336
+				},
+				"otherBone": 21,
+				"myBone": -1,
+				"flags": 16514
+			},
+			"entity": {
+				"format": "Cherax Entity",
+				"type": 3,
+				"model": 4116483281,
+				"baseFlags": 8455447,
+				"attachments": [
+					{
+						"data": {
+							"offset": {
+								"x": 0.10000000149011612,
+								"y": 0.14000000059604645,
+								"z": 0.14000000059604645
+							},
+							"parentOffset": {
+								"x": 0.0,
+								"y": 0.0,
+								"z": 0.0
+							},
+							"quat": {
+								"x": 0.2751564681529999,
+								"y": 0.05388907343149185,
+								"z": 0.25119781494140625,
+								"w": 0.9264364838600159
+							},
+							"otherBone": 0,
+							"myBone": -1,
+							"flags": 16514
+						},
+						"entity": {
+							"format": "Cherax Entity",
+							"type": 3,
+							"model": 3688284050,
+							"baseFlags": 8455447,
+							"attachments": [
+								{
+									"data": {
+										"offset": {
+											"x": 0.2199999988079071,
+											"y": -0.3400000035762787,
+											"z": -0.2199999988079071
+										},
+										"parentOffset": {
+											"x": 0.0,
+											"y": 0.0,
+											"z": 0.0
+										},
+										"quat": {
+											"x": -0.5179202556610107,
+											"y": 0.470331072807312,
+											"z": 0.6816446781158447,
+											"w": -0.21426138281822205
+										},
+										"otherBone": 0,
+										"myBone": -1,
+										"flags": 16514
+									},
+									"entity": {
+										"format": "Cherax Entity",
+										"type": 3,
+										"model": 1710689847,
+										"baseFlags": 8455431
+									}
+								}
+							]
+						}
+					}
+				]
+			}
+		},
+		{
+			"data": {
+				"offset": {
+					"x": -0.15000000596046448,
+					"y": -0.019999999552965164,
+					"z": 0.0
+				},
+				"parentOffset": {
+					"x": 0.0,
+					"y": 0.0,
+					"z": 0.0
+				},
+				"quat": {
+					"x": -0.5528600811958313,
+					"y": 0.49530330300331116,
+					"z": -0.5072193145751953,
+					"w": 0.4378913938999176
+				},
+				"otherBone": 66,
+				"myBone": -1,
+				"flags": 16514
+			},
+			"entity": {
+				"format": "Cherax Entity",
+				"type": 3,
+				"model": 3776622480,
+				"baseFlags": 8455431
+			}
+		},
+		{
+			"data": {
+				"offset": {
+					"x": -0.009999999776482582,
+					"y": -0.18000000715255737,
+					"z": 0.0
+				},
+				"parentOffset": {
+					"x": 0.0,
+					"y": 0.0,
+					"z": 0.0
+				},
+				"quat": {
+					"x": 0.03964924439787865,
+					"y": -0.9005205631256104,
+					"z": -0.04661841690540314,
+					"w": 0.4304850697517395
+				},
+				"otherBone": 22,
+				"myBone": -1,
+				"flags": 16514
+			},
+			"entity": {
+				"format": "Cherax Entity",
+				"type": 3,
+				"model": 32653987,
+				"baseFlags": 8455431
+			}
+		}
+	]
+}

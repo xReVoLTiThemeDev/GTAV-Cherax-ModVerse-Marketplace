@@ -1,111 +1,75 @@
 #!/usr/bin/env python3
-"""Validate public ModVerse Cherax Outfits and DLCs catalogs and uploaded assets.
+"""ModVerse Cherax Outfit/DLC catalog validator. Supports GitHub Release RPFs.
 
-Structural and integrity checks cannot establish permission, creator identity,
-or in-game compatibility. The release maintainer must verify those separately.
+Outfit JSON blobs are immutable Git files. DLC RPFs are SHA-256-pinned GitHub
+Release assets. CI validates release digest/size against GitHub metadata.
 """
-from __future__ import annotations
-import hashlib
-import json
-import re
-import sys
+import hashlib,json,os,re,sys,urllib.request
 from pathlib import Path
+BASE=Path(__file__).resolve().parent.parent/'marketplace'
+REPO='xReVoLTiThemeDev/GTAV-Cherax-ModVerse-Marketplace'
+SAFE=re.compile(r'^[A-Za-z0-9_-]{3,100}$')
+NAME=re.compile(r'^mMV_[A-Za-z0-9_-]+\.(json|rpf)$')
+HASH=re.compile(r'^[a-f0-9]{64}$')
+release_cache={}
 
-ROOT = Path(__file__).resolve().parent.parent / "marketplace"
-ID = re.compile(r"[A-Za-z0-9_-]{3,100}\Z")
-SHA = re.compile(r"[0-9a-f]{64}\Z")
-SAFE_FILENAME = re.compile(r"[A-Za-z0-9_.-]{1,150}\Z")
+def sha(path):
+ h=hashlib.sha256()
+ with open(path,'rb') as fp:
+  for b in iter(lambda:fp.read(1048576),b''):h.update(b)
+ return h.hexdigest()
 
-def check_category(kind: str):
-    folder = ROOT / kind
-    raw = (folder / "catalog.json").read_bytes()
-    if len(raw) > 1024 * 1024:
-        raise ValueError(f"{kind}: catalog exceeds 1 MiB")
-    catalog = json.loads(raw.decode("utf-8-sig"))
-    if not isinstance(catalog, dict) or catalog.get("schema") != "modverse.cherax.assets.v1":
-        raise ValueError(f"{kind}: schema mismatch")
-    if catalog.get("published") is not True or catalog.get("category") != kind:
-        raise ValueError(f"{kind}: category/published mismatch")
-    items = catalog.get("items")
-    if not isinstance(items, list) or len(items) > 500:
-        raise ValueError(f"{kind}: main items must be an array with 0-500 records")
-    pages = catalog.get("pages", [])
-    if not isinstance(pages, list) or len(pages) > 9 or pages != list(range(2,len(pages)+2)):
-        raise ValueError(f"{kind}: invalid page list (expected 2,3,..., max 10 pages)")
-    all_items = list(items)
-    for page in pages:
-        page_file = folder / f"catalog-{page}.json"
-        page_raw = page_file.read_bytes()
-        if len(page_raw) > 1024*1024:
-            raise ValueError(f"{kind}: catalog-{page} exceeds 1 MiB")
-        page_doc = json.loads(page_raw.decode("utf-8-sig"))
-        if not isinstance(page_doc,dict) or page_doc.get("schema") != catalog["schema"] or page_doc.get("category") != kind or page_doc.get("published") is not True:
-            raise ValueError(f"{kind}: invalid catalog-{page}")
-        page_items = page_doc.get("items")
-        if not isinstance(page_items,list) or len(page_items) > 500:
-            raise ValueError(f"{kind}: invalid catalog-{page} item count")
-        all_items.extend(page_items)
-    if len(all_items) > 5000:
-        raise ValueError(f"{kind}: over 5,000 entries")
-    ids, filenames, hashes = set(), set(), set()
-    for i, row in enumerate(all_items, 1):
-        label = f"{kind}[{i}]"
-        if not isinstance(row, dict): raise ValueError(f"{label}: not an object")
-        ident, filename = row.get("id"), row.get("filename")
-        name, creator, shared = row.get("name"), row.get("creator"), row.get("shared_by")
-        sha, size = row.get("sha256"), row.get("size_bytes")
-        ext = ".json" if kind == "outfits" else ".rpf"
-        if not isinstance(ident, str) or not ID.fullmatch(ident) or ".." in ident or ident in ids:
-            raise ValueError(f"{label}: unsafe/duplicate id")
-        ids.add(ident)
-        if not isinstance(filename, str) or not SAFE_FILENAME.fullmatch(filename) or not filename.endswith(ext) or filename in filenames:
-            raise ValueError(f"{label}: invalid/duplicate filename")
-        filenames.add(filename)
-        for key, txt in (("name", name),("creator",creator),("shared_by", shared)):
-            if not isinstance(txt,str) or not 1 <= len(txt.encode("utf-8")) <= 180:
-                raise ValueError(f"{label}: invalid {key}")
-        if not isinstance(sha,str) or not SHA.fullmatch(sha) or sha in hashes:
-            raise ValueError(f"{label}: invalid/duplicate sha256")
-        hashes.add(sha)
-        if type(size) is not int or not (4096 if kind == "dlcs" else 16) <= size <= (536870912 if kind == "dlcs" else 2097152):
-            raise ValueError(f"{label}: invalid size")
-        path = folder / "files" / (ident + ext)
-        if not path.is_file() or path.stat().st_size != size:
-            raise ValueError(f"{label}: missing or incorrect asset size: {path}")
-        h = hashlib.sha256()
-        with path.open("rb") as stream:
-            header = stream.read(24)
-            h.update(header)
-            for chunk in iter(lambda: stream.read(1024 * 1024), b""):
-                h.update(chunk)
-        if h.hexdigest() != sha:raise ValueError(f"{label}: asset checksum mismatch")
-        if kind == "outfits":
-            doc = json.loads(path.read_text(encoding="utf-8-sig"))
-            if not isinstance(doc, (dict, list)) or (isinstance(doc,dict) and doc.get("format") == "Cherax Entity" and doc.get("type") == 1):
-                raise ValueError(f"{label}: not a valid outfit JSON")
-        else:
-            if header[:4] != b"7FPR" or header[12:16] != b"OPEN":
-                raise ValueError(f"{label}: DLC must be RPF7 OPEN")
-            if size > 128 * 1024 * 1024:
-                raise ValueError(f"{label}: exceeds current in-game Lua buffered-download limit")
-            count = int.from_bytes(header[4:8], "little")
-            names = int.from_bytes(header[8:12], "little")
-            if count < 1 or count > 250000 or names < 1 or names > 128 * 1024 * 1024 or 16+count*16+names > size:
-                raise ValueError(f"{label}: implausible RPF directory header")
-        preview_sha = row.get("thumbnail_sha256")
-        if preview_sha is not None:
-            if not isinstance(preview_sha, str) or not SHA.fullmatch(preview_sha):
-                raise ValueError(f"{label}: invalid thumbnail hash")
-            thumbnail = folder / "thumbnails" / (ident + ".jpg")
-            data = thumbnail.read_bytes()
-            if len(data) < 100 or len(data) > 6*1024*1024 or not data.startswith(bytes([255,216])) or not data.endswith(bytes([255,217])):
-                raise ValueError(f"{label}: missing/non-JPEG thumbnail")
-            if hashlib.sha256(data).hexdigest() != preview_sha:raise ValueError(f"{label}: JPEG checksum mismatch")
-    print(f"PASS: {kind}: {len(all_items)} SHA-256 verified downloadable assets across {1+len(pages)} page(s).")
+def published_release(tag):
+ if tag in release_cache:return release_cache[tag]
+ if not SAFE.fullmatch(tag):raise ValueError('Unsafe release tag')
+ url=f'https://api.github.com/repos/{REPO}/releases/tags/{tag}'
+ headers={'Accept':'application/vnd.github+json','User-Agent':'ModVerse-Catalog-Validator'}
+ token=os.getenv('GH_TOKEN') or os.getenv('GITHUB_TOKEN')
+ if token:headers['Authorization']='Bearer '+token
+ with urllib.request.urlopen(urllib.request.Request(url,headers=headers),timeout=25) as r:
+  d=json.loads(r.read(10*1024*1024))
+ if d.get('tag_name')!=tag:raise ValueError('Release tag mismatch')
+ assets={a['name']:a for a in d.get('assets',[])}
+ release_cache[tag]=assets
+ return assets
 
-if __name__ == "__main__":
-    try:
-        for category in ("outfits","dlcs"):check_category(category)
-    except (ValueError,OSError,UnicodeError,json.JSONDecodeError) as e:
-        print("FAILED:",e,file=sys.stderr)
-        sys.exit(1)
+def valid():
+ for kind in ('outfits','dlcs'):
+  folder=BASE/kind
+  main=json.loads((folder/'catalog.json').read_text(encoding='utf-8-sig'))
+  if main.get('schema')!='modverse.cherax.assets.v1' or main.get('published') is not True or main.get('category')!=kind:raise ValueError('Catalog schema invalid: '+kind)
+  pages=main.get('pages',[])
+  if not isinstance(pages,list) or len(pages)>9 or pages!=list(range(2,len(pages)+2)):raise ValueError('Unexpected pagination')
+  docs=[main]
+  for pg in pages:
+   data=(folder/f'catalog-{pg}.json').read_bytes()
+   if len(data)>1048576:raise ValueError('Catalog exceeds 1MiB')
+   docs.append(json.loads(data.decode('utf-8-sig')))
+  seen_ids=set();seen_names=set();n=0
+  for doc in docs:
+   if doc.get('schema')!=main['schema'] or doc.get('category')!=kind or doc.get('published') is not True:raise ValueError('Page header mismatch')
+   rows=doc.get('items')
+   if not isinstance(rows,list) or len(rows)>500:raise ValueError('Page too many items')
+   for row in rows:
+    ident=row.get('id');filename=row.get('filename');digest=row.get('sha256');size=row.get('size_bytes')
+    if not isinstance(ident,str) or not SAFE.fullmatch(ident) or ident in seen_ids:raise ValueError('Bad/duplicate id')
+    if not isinstance(filename,str) or not NAME.fullmatch(filename) or not filename.endswith('.json' if kind=='outfits' else '.rpf') or filename in seen_names:raise ValueError('Bad filename')
+    if not isinstance(digest,str) or not HASH.fullmatch(digest):raise ValueError('Bad SHA')
+    if type(size)!=int or not (16 if kind=='outfits' else 4096)<=size<=(2097152 if kind=='outfits' else 128*1024*1024):raise ValueError('Bad size')
+    if not isinstance(row.get('name'),str) or not row.get('name') or not isinstance(row.get('shared_by'),str) or not row.get('shared_by'):raise ValueError('Missing name/uploader')
+    seen_ids.add(ident);seen_names.add(filename);n+=1
+    if kind=='outfits':
+     path=folder/'files'/(ident+'.json')
+     if not path.is_file() or path.stat().st_size!=size or sha(path)!=digest:raise ValueError('Missing/changed outfit: '+ident)
+     doc=json.loads(path.read_text(encoding='utf-8-sig'))
+     if not isinstance(doc,dict) or doc.get('format')!='Cherax Entity' or doc.get('type')!=2 or not isinstance(doc.get('components'),dict) or not isinstance(doc.get('props'),dict):raise ValueError('Non-outfit source: '+ident)
+    else:
+     tag=row.get('release_tag');name=row.get('asset_name')
+     if not isinstance(tag,str) or not SAFE.fullmatch(tag) or name!=filename:raise ValueError('DLC release source invalid')
+     asset=published_release(tag).get(name)
+     if not asset or asset.get('size')!=size or asset.get('digest')!='sha256:'+digest:raise ValueError('DLC Release asset mismatch: '+ident)
+  if n>5000:raise ValueError('Combined catalog exceeds client limit')
+  print('PASS:',kind,n,'catalog entries, '+('local source files SHA-256 verified' if kind=='outfits' else 'GitHub Release SHA-256/size verified'))
+if __name__=='__main__':
+ try:valid()
+ except Exception as e:print('FAILED:',e,file=sys.stderr);sys.exit(1)
