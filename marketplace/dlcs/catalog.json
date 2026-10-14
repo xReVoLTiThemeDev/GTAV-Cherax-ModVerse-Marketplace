@@ -24,7 +24,9 @@
       "compatibility_status": "RPF7_OPEN_header_verified; in_game_unverified",
       "permission_basis": "original_creator_redistribution_authorization_unverified",
       "release_tag": "dlcs-2026-10-approved-batch01",
-      "asset_name": "mMV_dlc_6e893a2a22bb.rpf"
+      "asset_name": "mMV_dlc_6e893a2a22bb.rpf",
+      "thumbnail_sha256": "8c0add586d244c16b427c49df9b2f7473f606166aa20cab615a69b218a6595d8",
+      "thumbnail_kind": "catalog_cover"
     },
     {
       "id": "1240968657191047198-1254264866147926077-82f165893285",
@@ -44,7 +46,9 @@
       "compatibility_status": "RPF7_OPEN_header_verified; in_game_unverified",
       "permission_basis": "original_creator_redistribution_authorization_unverified",
       "release_tag": "dlcs-2026-10-approved-batch01",
-      "asset_name": "mMV_dlc_82f165893285.rpf"
+      "asset_name": "mMV_dlc_82f165893285.rpf",
+      "thumbnail_sha256": "16b0c05619cca61e3d345789bb3466022a63c146c03577f71c0372b3ba6348e0",
+      "thumbnail_kind": "catalog_cover"
     },
     {
       "id": "1240968657191047198-1257941733195517992-e4050a7d145e",
@@ -64,7 +68,9 @@
       "compatibility_status": "RPF7_OPEN_header_verified; in_game_unverified",
       "permission_basis": "original_creator_redistribution_authorization_unverified",
       "release_tag": "dlcs-2026-10-approved-batch01",
-      "asset_name": "mMV_dlc_e4050a7d145e.rpf"
+      "asset_name": "mMV_dlc_e4050a7d145e.rpf",
+      "thumbnail_sha256": "06e972c72c31368d7c46b0188ec3cf457419633be6627753b2a7e777c9d0fce2",
+      "thumbnail_kind": "catalog_cover"
     },
     {
       "id": "1240968657191047198-1262488021547221054-4446369abd05",
@@ -84,7 +90,9 @@
       "compatibility_status": "RPF7_OPEN_header_verified; in_game_unverified",
       "permission_basis": "original_creator_redistribution_authorization_unverified",
       "release_tag": "dlcs-2026-10-approved-batch01",
-      "asset_name": "mMV_dlc_4446369abd05.rpf"
+      "asset_name": "mMV_dlc_4446369abd05.rpf",
+      "thumbnail_sha256": "1ff224601213cf700c582448939253f97e05ce65cd35a024287618e83203ed65",
+      "thumbnail_kind": "catalog_cover"
     },
     {
       "id": "1240968657191047198-1272588415627689995-625286389e04",
@@ -104,7 +112,9 @@
       "compatibility_status": "RPF7_OPEN_header_verified; in_game_unverified",
       "permission_basis": "original_creator_redistribution_authorization_unverified",
       "release_tag": "dlcs-2026-10-approved-batch01",
-      "asset_name": "mMV_dlc_625286389e04.rpf"
+      "asset_name": "mMV_dlc_625286389e04.rpf",
+      "thumbnail_sha256": "9db6722c71c4cdd95ecfdfdbbd4efcc40cfc3c059036025e463c9cb4321ee00a",
+      "thumbnail_kind": "catalog_cover"
     },
     {
       "id": "1240968657191047198-1275533982926114878-2b36999fd1ec",
@@ -124,7 +134,9 @@
       "compatibility_status": "RPF7_OPEN_header_verified; in_game_unverified",
       "permission_basis": "original_creator_redistribution_authorization_unverified",
       "release_tag": "dlcs-2026-10-approved-batch01",
-      "asset_name": "mMV_dlc_2b36999fd1ec.rpf"
+      "asset_name": "mMV_dlc_2b36999fd1ec.rpf",
+      "thumbnail_sha256": "5e9f445567d14dde4de203a12d7cf1a22876184f359a9670dd4fee87c58c853c",
+      "thumbnail_kind": "catalog_cover"
     },
     {
       "id": "1240968657191047198-1282238526947332160-6c503cd949fb",
@@ -144,7 +156,9 @@
       "compatibility_status": "RPF7_OPEN_header_verified; in_game_unverified",
       "permission_basis": "original_creator_redistribution_authorization_unverified",
       "release_tag": "dlcs-2026-10-approved-batch01",
-      "asset_name": "mMV_dlc_6c503cd949fb.rpf"
+      "asset_name": "mMV_dlc_6c503cd949fb.rpf",
+      "thumbnail_sha256": "712ab4987282400a8c9031fa8ce4cdfe8eaa7fd0cfdb007f9da01883ac0067f4",
+      "thumbnail_kind": "catalog_cover"
     },
     {
       "id": "1240968657191047198-1282248164363206707-19820f98527a",
@@ -164,7 +178,9 @@
       "compatibility_status": "RPF7_OPEN_header_verified; in_game_unverified",
       "permission_basis": "original_creator_redistribution_authorization_unverified",
       "release_tag": "dlcs-2026-10-approved-batch01",
-      "asset_name": "mMV_dlc_19820f98527a.rpf"
+      "asset_name": "mMV_dlc_19820f98527a.rpf",
+      "thumbnail_sha256": "018238006d515e198e68d4cf55317602bbfc8faee200d4c589b22c1dc2edcb53",
+      "thumbnail_kind": "catalog_cover"
     },
     {
       "id": "1240968657191047198-1304653623807971419-dfbd986ce890",
@@ -184,7 +200,9 @@
       "compatibility_status": "RPF7_OPEN_header_verified; in_game_unverified",
       "permission_basis": "original_creator_redistribution_authorization_unverified",
       "release_tag": "dlcs-2026-10-approved-batch01",
-      "asset_name": "mMV_dlc_dfbd986ce890.rpf"
+      "asset_name": "mMV_dlc_dfbd986ce890.rpf",
+      "thumbnail_sha256": "723e4402a2f82c1b36f44e286172ff313348b4741e5a7247467fbb656d4c3617",
+      "thumbnail_kind": "catalog_cover"
     },
     {
       "id": "1240968657191047198-1304772424734085121-f8bfe582a52a",
@@ -204,7 +222,9 @@
       "compatibility_status": "RPF7_OPEN_header_verified; in_game_unverified",
       "permission_basis": "original_creator_redistribution_authorization_unverified",
       "release_tag": "dlcs-2026-10-approved-batch01",
-      "asset_name": "mMV_dlc_f8bfe582a52a.rpf"
+      "asset_name": "mMV_dlc_f8bfe582a52a.rpf",
+      "thumbnail_sha256": "f030a8cfcf6f87ad25b7e5b2c72213701215f0c3de82460a43b21fe2ad9d1bad",
+      "thumbnail_kind": "catalog_cover"
     },
     {
       "id": "1240968657191047198-1319356116458799186-b8074c228ce0",
@@ -224,7 +244,9 @@
       "compatibility_status": "RPF7_OPEN_header_verified; in_game_unverified",
       "permission_basis": "original_creator_redistribution_authorization_unverified",
       "release_tag": "dlcs-2026-10-approved-batch01",
-      "asset_name": "mMV_dlc_b8074c228ce0.rpf"
+      "asset_name": "mMV_dlc_b8074c228ce0.rpf",
+      "thumbnail_sha256": "b2ec56129523de3dc8c38ecbd10d58bba5c9ee20100f35aabbcf4c7a6ce0f4ad",
+      "thumbnail_kind": "catalog_cover"
     },
     {
       "id": "1240968657191047198-1319727628357337099-dc5ce2fd3296",
@@ -244,7 +266,9 @@
       "compatibility_status": "RPF7_OPEN_header_verified; in_game_unverified",
       "permission_basis": "original_creator_redistribution_authorization_unverified",
       "release_tag": "dlcs-2026-10-approved-batch01",
-      "asset_name": "mMV_dlc_dc5ce2fd3296.rpf"
+      "asset_name": "mMV_dlc_dc5ce2fd3296.rpf",
+      "thumbnail_sha256": "1bab55e560e76046a99883f47083e65084276ca5eff2894ce4123e61a36f85cb",
+      "thumbnail_kind": "catalog_cover"
     },
     {
       "id": "1240968657191047198-1558935436649300028-addd8b299575",
@@ -264,7 +288,9 @@
       "compatibility_status": "RPF7_OPEN_header_verified; in_game_unverified",
       "permission_basis": "original_creator_redistribution_authorization_unverified",
       "release_tag": "dlcs-2026-10-approved-batch01",
-      "asset_name": "mMV_dlc_addd8b299575.rpf"
+      "asset_name": "mMV_dlc_addd8b299575.rpf",
+      "thumbnail_sha256": "22e2046e613d8c6aed650d17644b5ad7e8d5d63905c2fb86175239316e046243",
+      "thumbnail_kind": "catalog_cover"
     },
     {
       "id": "1240968657191047198-1558937912828108810-fd60c64829e3",
@@ -284,7 +310,9 @@
       "compatibility_status": "RPF7_OPEN_header_verified; in_game_unverified",
       "permission_basis": "original_creator_redistribution_authorization_unverified",
       "release_tag": "dlcs-2026-10-approved-batch01",
-      "asset_name": "mMV_dlc_fd60c64829e3.rpf"
+      "asset_name": "mMV_dlc_fd60c64829e3.rpf",
+      "thumbnail_sha256": "5afd4c5f4b73fcd88c4e230987bbeece4bdf33bb7ea5db2a7ffbafca8e80d654",
+      "thumbnail_kind": "catalog_cover"
     },
     {
       "id": "1240968657191047198-1558940476760137849-ff5de2fbfbd0",
@@ -304,7 +332,9 @@
       "compatibility_status": "RPF7_OPEN_header_verified; in_game_unverified",
       "permission_basis": "original_creator_redistribution_authorization_unverified",
       "release_tag": "dlcs-2026-10-approved-batch01",
-      "asset_name": "mMV_dlc_ff5de2fbfbd0.rpf"
+      "asset_name": "mMV_dlc_ff5de2fbfbd0.rpf",
+      "thumbnail_sha256": "ce26c11cee15d523e1540fe1cb9b01637c234bb3941207319fddfc7ba4ce176d",
+      "thumbnail_kind": "catalog_cover"
     }
   ]
 }
